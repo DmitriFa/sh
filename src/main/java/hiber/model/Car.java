@@ -6,12 +6,10 @@ import javax.persistence.*;
 @Table(name = "cars")
 public class Car  {
 
-    private User user;
-    @OneToOne(cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
-    public User getUser(){
-        return this.user;
-    }
+
+   // @OneToOne(cascade = CascadeType.ALL)
+   // @PrimaryKeyJoinColumn
+   // private User user;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
