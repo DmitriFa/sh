@@ -4,7 +4,15 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "cars")
-public class Car {
+public class Car  {
+
+    private User user;
+    @OneToOne(cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    public User getUser(){
+        return this.user;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -19,6 +19,12 @@ public class User {
    @Column(name = "email")
    private String email;
 
+
+  // @OneToOne(cascade = CascadeType.ALL)
+  //public Car getCar(){
+   //   return this.car;
+  //}
+
    public User() {}
    
    public User(String firstName, String lastName, String email) {
