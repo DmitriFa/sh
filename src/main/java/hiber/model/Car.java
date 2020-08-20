@@ -5,11 +5,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "cars")
 public class Car  {
-
-
-   // @OneToOne(cascade = CascadeType.ALL)
-   // @PrimaryKeyJoinColumn
-   // private User user;
+   @OneToOne(cascade = CascadeType.ALL)
+   @PrimaryKeyJoinColumn()
+    private User user;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
